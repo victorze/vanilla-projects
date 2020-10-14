@@ -1,0 +1,46 @@
+body {
+  background-color: #F3F3F3;
+  color: #3C1874;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #DE354C;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.field {
+  min-width: 15rem;
+  margin-top: 2rem;
+  margin-bottom: 0.3rem;
+  display: inline-block;
+}
+
+.field label {
+  width: 6rem;
+  display: inline-block;
+}
+
+.field input {
+  padding: 0.3rem;
+  font-size: inherit;
+  border-radius: 5px;
+  border: 1px solid #283747;
+}
+
+input:focus {
+  outline: none;
+}
+
+#notification {
+  color: #932432;
+  margin-top: 0.3rem;
+  font-size: 1rem;
+}
