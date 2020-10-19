@@ -1,4 +1,9 @@
 body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  margin: 0;
   background-color: #F3F3F3;
   color: #3C1874;
   font-size: 1.2rem;
@@ -6,33 +11,37 @@ body {
 }
 
 h1 {
-  text-align: center;
+  margin-bottom: 0;
   color: #DE354C;
+  text-align: center;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 2rem;
+  border: 1px solid #3C1874;
+  border-radius: 5px;
 }
 
 .field {
+  display: inline-block;
   min-width: 15rem;
   margin-top: 2rem;
   margin-bottom: 0.3rem;
-  display: inline-block;
 }
 
 .field label {
-  width: 6rem;
   display: inline-block;
+  width: 6rem;
 }
 
 .field input {
   padding: 0.3rem;
-  font-size: inherit;
-  border-radius: 5px;
   border: 1px solid #283747;
+  border-radius: 5px;
+  font-size: inherit;
 }
 
 input:focus {
@@ -40,7 +49,7 @@ input:focus {
 }
 
 #notification {
-  color: #932432;
   margin-top: 0.3rem;
+  color: #932432;
   font-size: 1rem;
 }
