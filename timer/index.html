@@ -4,23 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Timer</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Timer</h1>
-
   <div class="container">
+    <div id="timer">02:16:44</div>
+
+    <div class="controls">
+      <div>
+        <button id="start">Start</button>
+        <button id="pause">Pause</button>
+      </div>
+      <button id="reset">Reset</button>
+    </div>
+
     <div class="edit">
       <input type="number" id="hours" min="0" max="23" value="00">
       <input type="number" id="minutes" min="0" max="59" value="50">
       <input type="number" id="seconds" min="0" max="59" value="00">
     </div>
-    <div id="timer">02:16:44</div>
-    <div>
-      <button id="start">Start</button>
-      <button id="reset">Reset</button>
-    </div>
   </div>
 
+  <audio id="tictac" src="clock_ticking.wav"></audio>
 
   <script src="script.js"></script>
 </body>
