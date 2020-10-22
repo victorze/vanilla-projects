@@ -51,7 +51,7 @@ edit.addEventListener("click", e => {
   }
 })
 
-inputs.forEach(input => input.addEventListener("input", e => {
+inputs.forEach(input => input.addEventListener("input", () => {
   if (input.value == "") {
     input.value = "0"
   }
@@ -66,7 +66,7 @@ inputs.forEach(input => input.addEventListener("input", e => {
   reset.disabled = false
   clearInterval(startInterval)
   totalSeconds = inputToSeconds()
-  timer.textContent = formatTimer(secondsToTimer(inputToSeconds()))
+  timer.textContent = formatTimer(secondsToTimer(totalSeconds))
 }))
 
 function inputToSeconds() {
