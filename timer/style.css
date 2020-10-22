@@ -34,6 +34,7 @@ button {
   display: inline-block;
   width: 5rem;
   height: 5rem;
+  cursor: pointer;
 }
 
 .controls > div {
@@ -60,11 +61,17 @@ button {
   left: 0;
 }
 
+#start:disabled {
+  color: gray;
+  cursor: auto;
+}
+
+#reset:disabled {
+  color: gray;
+  cursor: auto;
+}
+
 .edit {
   position: relative;
   top: 4rem;
-}
-
-.foo {
-  z-index: 100;
 }

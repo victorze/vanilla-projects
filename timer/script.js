@@ -8,11 +8,12 @@ const pause = document.querySelector("#pause")
 let startInterval
 let totalSeconds = inputToSeconds()
 
+timer.textContent = formatTimer(secondsToTimer(totalSeconds))
+
 start.addEventListener("click", () => {
   reset.disabled = true
-  start.style.zIndex = "0"
-  pause.style.zIndex = "10"
-
+  start.style.display = "none"
+  pause.style.display = "inline-block"
 
   timer.textContent = formatTimer(secondsToTimer(totalSeconds))
 
@@ -21,21 +22,25 @@ start.addEventListener("click", () => {
     if (totalSeconds === 0) {
       document.getElementById("tictac").play()
       clearInterval(startInterval)
+      reset.disabled = false
+      pause.style.display = "none"
+      start.style.display = "inline-block"
+      start.disabled = true
     }
   }, 1000);
 })
 
 pause.addEventListener("click", () => {
-  start.style.zIndex = "10"
-  pause.style.zIndex = "0"
+  start.style.display = "inline-block"
+  pause.style.display = "none"
   reset.disabled = false
   clearInterval(startInterval)
 })
 
-
 reset.addEventListener("click", () => {
   totalSeconds = inputToSeconds()
   timer.textContent = formatTimer(secondsToTimer(totalSeconds))
+  start.disabled = false
 })
 
 function inputToSeconds() {
