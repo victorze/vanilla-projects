@@ -2,6 +2,7 @@ const projects = [
   "bin-2-dec",
   "timer",
   "cookie-clicker",
+  "case-converter",
 ]
 
 const container = document.querySelector(".container")
