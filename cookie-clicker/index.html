@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cookie Clicker</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="juego.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Galletas: <span id="counter">0</span></h1>
+
+        <img src="img/cookie.png" height="150" width="150" onclick="clickToCookie();">
+
+        <button class="btn" onclick="purchase(0);">Cursor 100</button>
+        <button class="btn" onclick="purchase(1);">Abuelita 200</button>
+        <button class="btn" onclick="purchase(2);">Horno 400</button>
+
+        <div id="message"></div>
+
+        <h2>Inventario</h2>
+        <div id="inventory"></div>
+
+        <div class="instructions">
+            <h3>Instrucciones</h3>
+            <p>
+                Para obtener galletas haga click en la imagen. Cuando tenga sufientes galletas
+                puede comprar un Cursor (100 galletas), una Abuelita (200 galletas) o un Horno (400 galletas)
+                para producir mas rápido. Un cursor produce 1 galleta por segundo, una abuelita 2 galletas
+                por segundo y un horno 4 galletas por segundo. El objetivo es acumular la mayor cantidad de galletas!
+            </p>
+        </div>
+    </div>
+</body>
+</html>
