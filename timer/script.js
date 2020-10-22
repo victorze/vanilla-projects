@@ -5,6 +5,8 @@ const timer = document.querySelector("#timer")
 const start = document.querySelector("#start")
 const reset = document.querySelector("#reset")
 const pause = document.querySelector("#pause")
+const edit = document.querySelector(".edit")
+const inputs = document.querySelectorAll("input")
 let startInterval
 let totalSeconds = inputToSeconds()
 
@@ -42,6 +44,30 @@ reset.addEventListener("click", () => {
   timer.textContent = formatTimer(secondsToTimer(totalSeconds))
   start.disabled = false
 })
+
+edit.addEventListener("click", e => {
+  if (e.target.nodeName === "INPUT") {
+    e.target.select()
+  }
+})
+
+inputs.forEach(input => input.addEventListener("input", e => {
+  if (input.value == "") {
+    input.value = "0"
+  }
+  if (input.id !== "hours") {
+    if (parseInt(input.value) >= 60) {
+      input.value = "59"
+    }
+  }
+
+  start.style.display = "inline-block"
+  pause.style.display = "none"
+  reset.disabled = false
+  clearInterval(startInterval)
+  totalSeconds = inputToSeconds()
+  timer.textContent = formatTimer(secondsToTimer(inputToSeconds()))
+}))
 
 function inputToSeconds() {
   return parseInt(hours.value) * 3600 + parseInt(minutes.value) * 60 + parseInt(seconds.value)

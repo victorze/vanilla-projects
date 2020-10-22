@@ -73,5 +73,41 @@ button {
 
 .edit {
   position: relative;
-  top: 4rem;
+  top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.edit > div {
+  display: flex;
+  flex-direction: column;
+  margin: 0.2rem;
+}
+
+.edit > div > span {
+  color: #bbb;
+  font-size: 0.8rem;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid #bbb;
+  background-color: inherit;
+  color: #bbb;
+  font-size: 2rem;
+  text-align: center;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::selection {
+  background-color: silver;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
