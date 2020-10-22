@@ -35,4 +35,3 @@ function capitalLetter(str) {
 
     return str.join(" ");
 }
-

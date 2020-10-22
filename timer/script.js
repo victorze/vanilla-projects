@@ -62,6 +62,7 @@ inputs.forEach(input => input.addEventListener("input", () => {
   }
 
   start.style.display = "inline-block"
+  start.disabled = false
   pause.style.display = "none"
   reset.disabled = false
   clearInterval(startInterval)
