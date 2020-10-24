@@ -1,20 +1,20 @@
 const todo = document.querySelector("#todo")
-const addTask = document.querySelector("button")
+const btn = document.querySelector("button")
 const todoList = document.querySelector(".todo-list")
 
-addTask.addEventListener("click", () => {
-  if (todo.value === "") return
-  todoList.appendChild(createItem(todo.value))
-  todo.value = ""
+btn.addEventListener("click", () => {
+  addTask()
 })
+
 todo.addEventListener("keydown", e => {
-  console.log(e.keyCode)
-  if (e.keyCode === 13) {
+  if (e.keyCode === 13) addTask()
+})
+
+function addTask() {
     if (todo.value === "") return
     todoList.appendChild(createItem(todo.value))
     todo.value = ""
-  }
-})
+}
 
 function createItem(value) {
   let todoItem = `<div class="todo-item">

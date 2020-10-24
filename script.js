@@ -3,6 +3,7 @@ const projects = [
   "timer",
   "cookie-clicker",
   "case-converter",
+  "todo-list",
 ]
 
 const container = document.querySelector(".container")
