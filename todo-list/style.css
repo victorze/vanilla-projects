@@ -51,11 +51,6 @@ button:focus {
   outline: none;
 }
 
-input[type="checkbox"] {
-  transform: scale(1.8);
-  cursor: pointer;
-}
-
 input {
   padding: 0.3rem;
   border: none;
@@ -63,8 +58,21 @@ input {
   font-size: inherit;
 }
 
+input[type="checkbox"] {
+  transform: scale(1.8);
+  cursor: pointer;
+}
+
 input:focus {
   outline: none;
+}
+
+.todo-item {
+  width: 35rem;
+}
+
+.todo-item > input[type="text"] {
+  width: 90%;
 }
 
 .todo-item > input:focus {
