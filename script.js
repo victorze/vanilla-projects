@@ -9,6 +9,11 @@ const projects = [
 const container = document.querySelector(".container")
 
 let pagesLink = ""
-projects.forEach(project => pagesLink += `<a href="${project}">${project}</a>`)
+projects.forEach(project => pagesLink += `<a href="${project}">${format(project)}</a>`)
 
 container.innerHTML = pagesLink
+
+function format(project) {
+  const name = project.split("-").join(" ")
+  return name[0].toUpperCase() + name.slice("1")
+}
