@@ -1,9 +1,10 @@
 const projects = [
-  "bin-2-dec",
+  "nueba-ortografia",
+  "todo-list",
   "timer",
   "cookie-clicker",
+  "bin-2-dec",
   "case-converter",
-  "todo-list",
 ]
 
 const container = document.querySelector(".container")
