@@ -24,7 +24,7 @@ function handlerKeyDown(e) {
     showStatistics()
     return
   }
-  if (e.key == chars[index].innerText) {
+  if (e.key == chars[index].innerText || (e.key == "Enter" && chars[index].innerText == " ")) {
     if (firstKeyPress) {
       start = Date.now()
       firstKeyPress = false
@@ -41,7 +41,7 @@ function handlerKeyDown(e) {
     lastPressError = true
   }
 }
-showStatistics()
+
 function showStatistics() {
   const words = phrase.text.split(" ").length
   const minuts = (Date.now() - start) / 1000 / 60
