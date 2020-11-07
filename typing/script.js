@@ -37,15 +37,15 @@ function handlerKeyDown(e) {
       chars[index-1].classList.add("error")
       errors++
     }
-  } else if (!e.shiftKey && e.key != "Dead") { // ignore shift key
+  } else if (!e.shiftKey && e.key != "Dead") { // ignore shift key and accent mark
     lastPressError = true
   }
 }
 
 function showStatistics() {
   const words = phrase.text.split(" ").length
-  const minuts = (Date.now() - start) / 1000 / 60
-  const speed = Math.round(words / minuts)
+  const minutes = (Date.now() - start) / 1000 / 60
+  const speed = Math.round(words / minutes)
 
   const statistics = document.querySelector(".statistics")
   const precision = Math.round((phrase.text.length - errors) / phrase.text.length * 100)
