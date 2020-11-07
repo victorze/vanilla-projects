@@ -1,9 +1,12 @@
-const textContainer = document.querySelector(".text-container")
-const text = "Lorem ipsum dolor sit amet consecta dipis icing elit Omnis harum sint maiores autem"
+const phraseContainer = document.querySelector(".phrase")
+const by = document.querySelector(".by")
 
-textContainer.innerHTML = text.split("").map(char => `<span>${char}</span>`).join("")
+const phrase = phrases[Math.floor(Math.random() * phrases.length)]
 
-const chars = document.querySelectorAll(".text-container > span")
+phraseContainer.innerHTML = phrase.text.split("").map(char => `<span>${char}</span>`).join("")
+by.innerText = phrase.by
+
+const chars = document.querySelectorAll(".phrase > span")
 chars[0].classList.add("active")
 
 let start
@@ -15,10 +18,10 @@ let lastPressError = false
 document.body.addEventListener("keydown", handlerKeyDown)
 
 function handlerKeyDown(e) {
-  if (index == text.length - 1) {
+  if (index == phrase.text.length - 1) {
     chars[index].classList.remove("active")
+    document.body.removeEventListener("keydown", handlerKeyDown)
     showStatistics()
-    document.body.removeEventListener("keydown" ,foo)
     return
   }
   if (e.key == chars[index].innerText) {
@@ -34,18 +37,18 @@ function handlerKeyDown(e) {
       chars[index-1].classList.add("error")
       errors++
     }
-  } else if (!e.shiftKey) { // ignore shift key
+  } else if (!e.shiftKey && e.key != "Dead") { // ignore shift key
     lastPressError = true
   }
 }
-
+showStatistics()
 function showStatistics() {
-  const words = text.split(" ").length
+  const words = phrase.text.split(" ").length
   const minuts = (Date.now() - start) / 1000 / 60
   const speed = Math.round(words / minuts)
 
   const statistics = document.querySelector(".statistics")
-  const precision = Math.round((text.length - errors) / text.length * 100)
+  const precision = Math.round((phrase.text.length - errors) / phrase.text.length * 100)
 
   statistics.innerHTML = `
     <div>
@@ -53,6 +56,7 @@ function showStatistics() {
       <p>Velocidad: ${speed} ppm</p>
       <p>Precisión: ${precision}%</p>
       <p>Errores: ${errors}</p>
+      <button onclick="location.reload()" class="next-phrase">OTRA FRASE</button>
     </div>
   `
 }

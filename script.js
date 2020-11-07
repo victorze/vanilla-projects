@@ -1,4 +1,5 @@
 const projects = [
+  "typing",
   "nueba-ortografia",
   "todo-list",
   "timer",
