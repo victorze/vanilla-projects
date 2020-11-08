@@ -20,7 +20,7 @@ const phrases = [
     by: "Antoine de Saint-Exupéry"
   },
   {
-    text: "Los mejores programadores no son marginalmente mejores que los simplemente buenos. Ellos son un orden de magnitud mayor, medida por cualquier estándar: creatividad conceptual, velocidad, ingenio de diseño, o la capacidad de resolución de problemas",
+    text: "Los mejores programadores no son marginalmente mejores que los simplemente buenos. Ellos son un orden de magnitud mayor, medida por cualquier estándar: creatividad conceptual, velocidad, ingenio de diseño, o la capacidad de resolución de problemas.",
     by: "Randall E. Stross"
   },
   {
