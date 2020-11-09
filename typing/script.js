@@ -52,11 +52,11 @@ function showStatistics() {
 
   statistics.innerHTML = `
     <div>
-      <h2>Estadísticas</h2>
-      <p>Velocidad: ${speed} ppm</p>
-      <p>Precisión: ${precision}%</p>
-      <p>Errores: ${errors}</p>
-      <button onclick="location.reload()" class="next-phrase">OTRA FRASE</button>
+      <h2>Statistic</h2>
+      <p>Speed: ${speed} ppm</p>
+      <p>Precision: ${precision}%</p>
+      <p>Errors: ${errors}</p>
+      <button onclick="location.reload()" class="next-phrase">ANOTHER PHRASE</button>
     </div>
   `
 }
