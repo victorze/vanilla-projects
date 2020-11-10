@@ -3,13 +3,14 @@
 body {
   font-family: 'Raleway', sans-serif;
   font-size: 1.5rem;
+  background-color: #25274D;
 }
 
 h1 {
   text-align: center;
   font-weight: 200;
   font-size: 6rem;
-  color: #03396c;
+  color: #2e9cca;
 }
 
 .container {
@@ -25,11 +26,12 @@ h1 {
   padding: 1rem;
   border-radius: 4px;
   margin-bottom: 0.5em;
-  background-color: #011f4b;
-  color: #b3cde0;
+  background-color: #464866;
+  color: #aaabb8;
   text-decoration: none;
 }
 
 .container > a:hover {
-  background-color: #03396c;
+  background-color: #2e9cca;
+  color: #25274d;
 }
