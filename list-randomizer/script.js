@@ -1,9 +1,14 @@
 const textarea = document.querySelector("textarea");
 
 function randomize() {
-  const items = textarea.value.split("\n").map(item => item.trim()).filter(item => item != "")
+  const items = textarea.value
+                  .split("\n")
+                  .map(item => item.trim())
+                  .filter(item => item != "")
   shuffle(items)
-  textarea.value = items.map((item, i) => `${i + 1}. ${item}`).join("\n")
+  textarea.value = items
+                     .map((item, i) => `${i + 1}. ${item}`)
+                     .join("\n")
 }
 
 function resetForm() {

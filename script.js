@@ -11,10 +11,9 @@ const projects = [
 
 const container = document.querySelector(".container")
 
-let pagesLink = ""
-projects.forEach(project => pagesLink += `<a href="${project}">${format(project)}</a>`)
-
-container.innerHTML = pagesLink
+container.innerHTML = projects
+                        .map(project => `<a href="${project}">${format(project)}</a>`)
+                        .join("")
 
 function format(project) {
   const name = project.split("-").join(" ")
