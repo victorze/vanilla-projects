@@ -1,5 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+:root {
+  --primary: #479761;
+  --secondary: #CEBC81;
+  --background: #19181A;
+}
+
 body {
-    font-family: sans-serif, Arial;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--background);
 }
 
 .container {
@@ -17,15 +26,21 @@ body {
 }
 
 h1 {
+    color: var(--secondary);
     text-align: center;
-    color: #48444D;
-    font-size: 2.5rem;
+    font-weight: 200;
+    font-size: 4rem;
+    text-transform: uppercase;
 }
 
 textarea {
+    padding: 0.5rem;
     width: 100%;
     height: 13rem;
-    padding: 0.5rem;
+}
+
+textarea:focus {
+  outline: none;
 }
 
 .controls {
@@ -34,13 +49,14 @@ textarea {
 }
 
 button {
-    margin-top: 1rem;
     padding: 0.7rem;
-    background-color: #5661B3;
-    color: white;
     border: none;
     border-radius: 0.3rem;
-    font-size: 1rem;
+    margin-top: 1rem;
+    background-color: var(--primary);
+    color: bar(--background);
+    font-size: 0.8rem;
+    text-transform: uppercase;
     cursor: pointer;
 }
 
@@ -48,21 +64,22 @@ button:active {
     transform: translateY(1px);
 }
 
-.copy {
-    position: absolute;
-    right: -4.5rem;
-    top: 0.4rem;
-    padding: 0.3rem;
-    cursor: pointer;
-    font-size: .9rem;
-    border-radius: 0.3rem;
-    background-color: #DAE1E7;
+button:focus {
+  outline: none;
 }
 
-.copy:hover {
-    background-color: #606F7B;
-    color: white;
+.copy {
+    position: absolute;
+    top: 0.4rem;
+    right: -4.5rem;
+    padding: 0.5rem;
     border-radius: 0.3rem;
+    background-color: var(--secondary);
+    color: black;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
 .copy:active {
