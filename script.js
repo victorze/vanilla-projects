@@ -2,6 +2,7 @@ const projects = [
   "typing",
   "nueba-ortografia",
   "todo-list",
+  "list-randomizer",
   "timer",
   "cookie-clicker",
   "bin-2-dec",
