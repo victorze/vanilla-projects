@@ -11,6 +11,12 @@ h1 {
   margin: 2rem 0 0.5rem 0;
   text-align: center;
   font-size: 3rem;
+  text-transform: uppercase;
+}
+
+h1 + p {
+  text-align: center;
+  font-size: 0.9rem;
 }
 
 textarea {
@@ -20,10 +26,14 @@ textarea {
   width: 100%;
 
   color: #240b36;
-  border: 1px solid #c31432;
+  border: 1px solid #240b36;
   border-radius: 0.2rem;
 
   resize: none;
+}
+
+textarea:focus {
+  outline: none;
 }
 
 blockquote {
@@ -57,7 +67,7 @@ a:hover, a:active {
 
   margin: 0 auto;
   margin-top: 0.3rem;
-  padding: 0.7rem 0.9rem;
+  padding: 0.9rem;
 
   background: #c31432;
   background: linear-gradient(to right top, #240b36, #c31432);
@@ -65,7 +75,7 @@ a:hover, a:active {
   border-radius: 0.4rem;
   color: #f4eafb;
 
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
 }
 
@@ -75,6 +85,10 @@ a:hover, a:active {
 
 #submit:active {
     transform: scale(1.01, 1.01);
+}
+
+#submit:focus {
+  outline: none;
 }
 
 .content {
