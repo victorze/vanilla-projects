@@ -16,7 +16,7 @@ function purchase(object) {
     cookies -= priceProduct[object]
     message.innerHTML = ""
   } else {
-    massage.innerHTML = "No tienes suficientes galletas"
+    message.innerHTML = "No tienes suficientes galletas"
   }
 }
 
