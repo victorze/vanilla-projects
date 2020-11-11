@@ -1,6 +1,6 @@
 const message = document.getElementById("message")
 
-let cookies = 1231234
+let cookies = 0
 const inventory = [0, 0, 0]
 const cookiesProduce = [1, 2, 4]
 const priceProduct = [100, 200, 400]
