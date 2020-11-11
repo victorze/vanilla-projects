@@ -53,7 +53,7 @@ img:active {
 }
 
 .btn:active {
-  transform: scale(1.01, 1.01);
+  transform: translateY(1px);
 }
 
 .btn:focus {
