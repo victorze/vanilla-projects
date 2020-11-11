@@ -24,6 +24,7 @@ function handlerKeyDown(e) {
     showStatistics()
     return
   }
+
   if (e.key == chars[index].innerText || (e.key == "Enter" && chars[index].innerText == " ")) {
     if (firstKeyPress) {
       start = Date.now()
@@ -37,7 +38,7 @@ function handlerKeyDown(e) {
       chars[index-1].classList.add("error")
       errors++
     }
-  } else if (!e.shiftKey && e.key != "Dead") { // ignore shift key and accent mark
+  } else if (!e.shiftKey) { // ignore shift key
     lastPressError = true
   }
 }

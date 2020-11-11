@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <title>Case Converter</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="content">
-            <h1>Case Converter</h1>
+      <div class="content">
+        <h1>Case Converter</h1>
 
-            <div class="text">
-                <div id="copy" class="copy">Copy</div>
-                <textarea
-                  spellcheck="false"
-                  placeholder="Enter a text"
-                  autocomplete="off"></textarea>
-            </div>
-
-            <div class="controls">
-                <button id="upper">Uppercase</button>
-                <button id="lower">Lowercase</button>
-                <button id="capitalized">Capitalize</button>
-            </div>
+        <div class="text">
+          <div class="copy" onclick="copy()">Copy</div>
+          <textarea
+            spellcheck="false"
+            placeholder="Enter a text"
+            autocomplete="off"></textarea>
         </div>
+
+        <div class="controls">
+          <button onclick="upper()">Uppercase</button>
+          <button onclick="lower()">Lowercase</button>
+          <button onclick="capitalize()">Capitalize</button>
+        </div>
+      </div>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
 

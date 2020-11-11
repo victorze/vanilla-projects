@@ -1,37 +1,25 @@
-const btnUpper = document.getElementById("upper");
-const btnLower = document.getElementById("lower");
-const btnCapitalized = document.getElementById("capitalized");
-const copy = document.getElementById("copy");
+const textarea = document.querySelector("textarea")
 
-btnUpper.addEventListener("click", () => {
-    const textarea = document.querySelector("textarea")
-    let text = textarea.value;
-    textarea.value = text.toUpperCase();
-});
+function upper() {
+  textarea.value = textarea.value.toUpperCase();
+}
 
-btnLower.addEventListener("click", () => {
-    const textarea = document.querySelector("textarea")
-    let text = textarea.value;
-    textarea.value = text.toLowerCase();
-});
+function lower() {
+  textarea.value = textarea.value.toLowerCase();
+}
 
-btnCapitalized.addEventListener("click", () => {
-    const textarea = document.querySelector("textarea")
-    let text = textarea.value;
-    textarea.value = capitalLetter(text.trim());
-});
+function capitalize() {
+  textarea.value = capitalLetter(textarea.value)
+}
 
-copy.addEventListener("click", () => {
-    document.querySelector("textarea").select();
-    document.execCommand("copy");
-});
+function copy() {
+  textarea.select();
+  document.execCommand("copy");
+}
 
 function capitalLetter(str) {
-    str = str.split(" ");
-
-    for (let i = 0, x = str.length; i < x; i++) {
-        str[i] = str[i][0].toUpperCase() + str[i].substr(1);
-    }
-
-    return str.join(" ");
+  return str
+           .split(" ")
+           .map(str => str[0].toUpperCase() + str.slice(1))
+           .join(" ")
 }
