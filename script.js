@@ -1,10 +1,10 @@
 const projects = [
   "typing",
-  "nueba-ortografia",
-  "todo-list",
-  "list-randomizer",
   "timer",
   "cookie-clicker",
+  "nueba-ortografia",
+  "list-randomizer",
+  "todo-list",
   "bin-2-dec",
   "case-converter",
 ]
