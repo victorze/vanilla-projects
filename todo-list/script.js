@@ -19,7 +19,7 @@ function addTask() {
 function createItem(value) {
   let todoItem = `<div class="todo-item">
                     <input type="checkbox">
-                    <input type="text" value="${value}">
+                    <input type="text" value="${value}" spellcheck="false">
                   </div>`
   todoItem = new DOMParser().parseFromString(todoItem, 'text/html').body.children[0]
 
