@@ -1,16 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
 * {
   box-sizing: border-box;
 }
 
 body {
   color: #240b36;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 h1 {
   margin: 2rem 0 0.5rem 0;
   text-align: center;
-  font-size: 3rem;
+  font-size: 4rem;
+  font-weight: 200;
   text-transform: uppercase;
 }
 
@@ -28,6 +31,7 @@ textarea {
   color: #240b36;
   border: 1px solid #240b36;
   border-radius: 0.2rem;
+  font-family: inherit;
 
   resize: none;
 }
