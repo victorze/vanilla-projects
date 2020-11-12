@@ -1,6 +1,12 @@
 const textarea = document.querySelector("textarea");
 
 function randomize() {
+  if (textarea.value.trim() === "") {
+    window.alert("You must enter items")
+    textarea.focus()
+    return
+  }
+
   const items = textarea.value
                   .split("\n")
                   .map(item => item.trim())
@@ -13,11 +19,12 @@ function randomize() {
 
 function resetForm() {
   textarea.value = ""
+  textarea.focus()
 }
 
 // Algorithm: https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#Fisher_and_Yates'_original_method
 function shuffle(array) {
-  for(let i = array.length -1 ; i > 0; i--) {
+  for (let i = array.length -1 ; i > 0; i--) {
     const j = Math.floor(Math.random() * i)
     const temp = array[i]
     array[i] = array[j]
