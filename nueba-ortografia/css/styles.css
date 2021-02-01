@@ -10,7 +10,7 @@ body {
 }
 
 h1 {
-  margin: 2rem 0 0.5rem 0;
+  margin: 1rem 0 0.5rem 0;
   text-align: center;
   font-size: 4rem;
   font-weight: 200;
@@ -96,7 +96,7 @@ a:hover, a:active {
 }
 
 .content {
-  margin: 0 auto;
+  margin: 0 auto 2rem;
   max-width: 40rem;
   width: 90%;
 }

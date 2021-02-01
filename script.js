@@ -1,18 +1,18 @@
 const projects = [
   "typing",
-  "timer",
-  "cookie-clicker",
   "nueba-ortografia",
-  "list-randomizer",
+  "cookie-clicker",
   "todo-list",
+  "timer",
   "bin-2-dec",
+  "list-randomizer",
   "case-converter",
 ]
 
 const container = document.querySelector(".container")
 
 container.innerHTML = projects
-                        .map(project => `<a href="${project}">${format(project)}</a>`)
+                        .map(project => `<a href="${project}" target="_blank">${format(project)}</a>`)
                         .join("")
 
 function format(project) {

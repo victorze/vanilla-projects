@@ -80,7 +80,7 @@ h2 {
   max-width: 25rem;
   margin: 0 auto;
   color: #8E8268;
-  font-size: 0.9rem;
+  /* font-size: 0.9rem; */
 }
 
 .instructions > h3 {
