@@ -8,27 +8,26 @@
 
 body {
   margin: 0;
-  font-family: 'Syne Mono', monospace;
+  min-height: 100vh;
   background-color: var(--background);
+  font-family: 'Syne Mono', monospace;
 }
 
 .container {
+  margin: 0 auto;
   width: 50%;
-  margin: 4rem auto;
   text-align: center;
 }
 
 .container > h1 {
-  font-size: 5rem;
   color: var(--secondary);
+  font-size: 5rem;
   text-transform: uppercase;
 }
 
 img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2em;
+  margin: 0 auto 2em;
   cursor: pointer;
 }
 
@@ -38,10 +37,10 @@ img:active {
 
 .btn {
   display: inline-block;
-  padding: 1rem;
+  margin: 4px 2px;
   border: none;
   border-radius: 3px;
-  margin: 4px 2px;
+  padding: 1rem;
   background-color: var(--primary);
   color: var(--secondary);
   text-align: center;
@@ -53,7 +52,7 @@ img:active {
 }
 
 .btn:active {
-  transform: translateY(1px);
+  transform: scale(1.02, 1.02);
 }
 
 .btn:focus {
@@ -80,12 +79,10 @@ h2 {
   max-width: 25rem;
   margin: 0 auto;
   color: #8E8268;
-  /* font-size: 0.9rem; */
 }
 
 .instructions > h3 {
-  margin-top: 3rem;
-  margin-bottom: 0.3rem;
+  margin: 3rem 0 .3rem;
 }
 
 .instructions > p {
