@@ -1,24 +1,21 @@
 body {
-  margin: 0;
-  background-color: #0d0d0d;
-}
-
-.container {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  min-height: 100vh;
-  max-width: 80rem;
   margin: 0 auto;
+  min-height: 100vh;
+  max-width: 70rem;
+  background-color: #0d0d0d;
 }
 
 input {
-  background-color: #0d0d0d;
   border: none;
   border-bottom: solid 0.1em #a7ecb7;
+  background-color: #0d0d0d;
   color: #a7ecb7;
   font-size: 7rem;
   margin: 2rem;
+  -moz-appearance: textfield;
 }
 
 input:focus {
@@ -34,4 +31,3 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
