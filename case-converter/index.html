@@ -1,32 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Case Converter</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="container">
-      <div class="content">
-        <h1>Case Converter</h1>
+<head>
+  <meta charset="UTF-8">
+  <title>Case Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Case Converter</h1>
 
-        <div class="text">
-          <div class="copy" onclick="copy()">Copy</div>
-          <textarea
-            spellcheck="false"
-            placeholder="Enter a text"
-            autocomplete="off"></textarea>
-        </div>
+    <textarea spellcheck="false" placeholder="Enter a text" autocomplete="off"></textarea>
 
-        <div class="controls">
-          <button onclick="upper()">Uppercase</button>
-          <button onclick="lower()">Lowercase</button>
-          <button onclick="capitalize()">Capitalize</button>
-        </div>
-      </div>
+    <div class="controls">
+      <button onclick="upper()">Uppercase</button>
+      <button onclick="lower()">Lowercase</button>
+      <button onclick="capitalize()">Capitalize</button>
     </div>
+  </div>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
-
