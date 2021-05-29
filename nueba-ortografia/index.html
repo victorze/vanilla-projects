@@ -1,65 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Nueba Ortografía</title>
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Nueba Ortografía</title>
+</head>
+<body>
+  <h1>Nueba ortografía</h1>
+  <p>
+    Esta aplicación está inspirada en la
+    <a href="https://www.youtube.com/watch?v=VpkneIesi60" target="_blank">charla TED</a>
+    impartida por la Dra. Karina Galperin.
+  </p>
 
-    <div class="content">
-      <section>
-        <h1>Nueba ortografía</h1>
-        <p>
-          Esta aplicación está inspirada en la
-          <a href="https://www.youtube.com/watch?v=VpkneIesi60" target="_blank">charla TED</a>
-          impartida por la Dra. Karina Galperin.
-        </p>
-
-        <form action="">
-          <textarea id="input" spellcheck="false" placeholder="Ingrese un texto">
-Haz click en el botón para convertir las siguientes palabras:
-(Aquí puedes escribir cualquier texto que quieras convertir a la "nueba ortografía")
-
+  <section>
+    <textarea id="input" spellcheck="false" placeholder="Ingrese un texto">
 - Hola
 - Vaca
 - Argentina
 - Guerra
 - Zorro
-          </textarea>
-          <input type="submit" id="submit" value="Nueba ortografía">
-        </form>
+    </textarea>
+    <button id="submit" onclick="simplify()">Nueba ortografía</button>
 
+    <textarea id="output" readonly spellcheck="false"></textarea>
+  </section>
 
-        <div>
-          <textarea id="output" readonly spellcheck="false"></textarea>
-        </div>
-      </section>
+  <section>
+    <blockquote cite="https://ejemplo.es/noticias/declariones-de-maria-alvarez">
+      <p>Debemos escribir como pronunciamos y pronunciar como escribimos.</p>
+      <footer>Antonio de Nebrija, 1492</footer>
+    </blockquote>
 
-      <section>
-        <blockquote cite="https://ejemplo.es/noticias/declariones-de-maria-alvarez">
-          <p>Debemos escribir como pronunciamos y pronunciar como escribimos.</p>
-          <footer>Antonio de Nebrija, 1492</footer>
-        </blockquote>
-      </section>
+    <h2>Modificaciones propuestas</h2>
+    <p>- Eliminar la <strong>h</strong> muda:
+      <strong>hola</strong> -> <strong>ola</strong>.
+    </p>
+    <p>- Utilizar solo una entre la <strong>b</strong> y la <strong>v</strong> (elegí la b):
+      <strong>vaca</strong> -> <strong>baca</strong>.
+    </p>
+    <p>- Dividir las funciones entre la <strong>g</strong> y la <strong>j</strong>:
+      <strong>Argentina</strong> -> <strong>Arjentina</strong> y
+      <strong>guerra</strong> -> <strong>gerra</strong>.
+    </p>
+    <p>- Cambiar la <strong>z</strong> por la <strong>s</strong>:
+      <strong>zorro</strong> -> <strong>sorro</strong>
+    </p>
+  </section>
 
-      <section>
-        <h2>Modificaciones propuestas</h2>
-        <p>- Eliminar la <strong>h</strong> muda:
-        <strong>hola</strong> se convierte a <strong>ola</strong>.</p>
-        <p>- Utilizar solo una entre la <strong>b</strong> y la <strong>v</strong> (elegí la b):
-        <strong>vaca</strong> se convierte a <strong>baca</strong>.</p>
-        <p>- Dividir las funciones entre la <strong>g</strong> y la <strong>j</strong>:
-        <strong>Argentina</strong> se convierte a <strong>Arjentina</strong> y
-        <strong>guerra</strong> se convierte a <strong>gerra</strong>.</p>
-        <p>- Cambiar la <strong>z</strong> por la <strong>s</strong>:
-        <strong>zorro</strong> se convierte a <strong>sorro</strong></p>
-      </section>
-    </div>
-
-    <script src="js/app.js"></script>
-    <script src="js/script.js"></script>
-  </body>
+  <script src="js/app.js"></script>
+  <script src="js/script.js"></script>
+</body>
 </html>
-

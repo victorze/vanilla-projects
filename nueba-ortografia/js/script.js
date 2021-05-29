@@ -1,12 +1,5 @@
-'use strict';
-
-$('#submit').addEventListener('click', e => {
-  e.preventDefault()
-  let input = $('#input').value
-  $('#output').value = simplifySpelling(input)
-});
-
-function $(selector) {
-  return document.querySelector(selector)
+function simplify() {
+  const input = document.querySelector("#input");
+  const output = document.querySelector("#output");
+  output.value = simplifySpelling(input.value);
 }
-
