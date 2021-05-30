@@ -2,6 +2,7 @@
 
 body {
   font-family: 'Turret Road', cursive;
+  background-color: #F6F7F0;
   font-size: 2rem;
 }
 
@@ -19,11 +20,12 @@ h1 {
 #todo {
   width: 100%;
   border-bottom: 2px solid gray;
+  background-color: inherit;
   font-size: 3rem;
 }
 
 #todo:focus {
-  background-color: lavender;
+  background-color: #DEE0D4;
 }
 
 .todo-list {
@@ -33,7 +35,7 @@ h1 {
 button {
   margin-top: .5rem;
   border: none;
-  background-color: #fff;
+  background-color: inherit;
   font-family: inherit;
   font-size: 1.5rem;
   text-align: left;
@@ -55,6 +57,7 @@ button:active {
 input {
   border: none;
   padding: .3rem;
+  background-color: inherit;
   font-family: inherit;
   font-size: inherit;
 }
@@ -73,5 +76,5 @@ input:focus {
 }
 
 .todo-item > input:focus {
-  background-color: lavender;
+  background-color: #DEE0D4;
 }

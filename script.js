@@ -1,21 +1,29 @@
 const projects = [
   "typing",
   "nueba-ortografia",
-  "cookie-clicker",
   "todo-list",
+  "cookie-clicker",
   "timer",
   "bin-2-dec",
   "list-randomizer",
   "case-converter",
-]
+];
 
-const container = document.querySelector(".container")
-
+const container = document.querySelector(".projects");
 container.innerHTML = projects
-                        .map(project => `<a href="${project}" target="_blank">${format(project)}</a>`)
-                        .join("")
+                        .map(project => template(project))
+                        .join("");
+
+function template(project) {
+  return `
+    <a class="project" href="${project}" target="_blank">
+      <img src="images/${project}.png" alt="">
+      <p>${format(project)}</p>
+    </a>
+  `;
+}
 
 function format(project) {
-  const name = project.split("-").join(" ")
-  return name[0].toUpperCase() + name.slice("1")
+  const name = project.split("-").join(" ");
+  return name[0].toUpperCase() + name.slice("1");
 }

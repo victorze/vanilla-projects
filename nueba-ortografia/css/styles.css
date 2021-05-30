@@ -10,10 +10,11 @@ body {
   margin: 0 auto 2rem;
   max-width: 50rem;
   width: 90%;
+  background-color: #E6E9EF;
 }
 
 h1 {
-  margin: 1rem 0 0.5rem 0;
+  margin: 1rem;
   text-align: center;
   font-size: 5rem;
   font-weight: 200;
@@ -33,6 +34,7 @@ textarea {
   width: 80%;
   min-height: 10rem;
   padding: .5rem;
+  background-color: #F3F4F8;
   color: #240b36;
   font-family: inherit;
   font-size: .9rem;
