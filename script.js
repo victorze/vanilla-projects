@@ -1,4 +1,4 @@
-const projects = [
+const listProjects = [
   "typing",
   "nueba-ortografia",
   "todo-list",
@@ -9,8 +9,8 @@ const projects = [
   "case-converter",
 ];
 
-const container = document.querySelector(".projects");
-container.innerHTML = projects
+const projects = document.querySelector(".projects");
+projects.innerHTML = listProjects
                         .map(project => template(project))
                         .join("");
 
