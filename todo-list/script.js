@@ -1,35 +1,31 @@
-const todo = document.querySelector("#todo")
-const btn = document.querySelector("button")
-const todoList = document.querySelector(".todo-list")
+const todo = document.querySelector("#todo");
+const todoList = document.querySelector(".todo-list");
 
-btn.addEventListener("click", () => {
-  addTask()
-})
-
+// TODO: almacenar en localStorage
 todo.addEventListener("keydown", e => {
-  if (e.keyCode === 13) addTask()
-})
+  if (e.keyCode == 13) addTask();
+});
 
 function addTask() {
-    if (todo.value === "") return
-    todoList.appendChild(createItem(todo.value))
-    todo.value = ""
+    if (!todo.value.trim()) return;
+    todoList.appendChild(createItem(todo.value));
+    todo.value = "";
 }
 
 function createItem(value) {
   let todoItem = `<div class="todo-item">
                     <input type="checkbox">
                     <input type="text" value="${value}" spellcheck="false">
-                  </div>`
-  todoItem = new DOMParser().parseFromString(todoItem, 'text/html').body.children[0]
+                  </div>`;
+  todoItem = new DOMParser().parseFromString(todoItem, 'text/html').body.children[0];
 
   // Remove checkbox
-  const checkbox = todoItem.querySelector('input[type=checkbox]')
+  const checkbox = todoItem.querySelector('input[type=checkbox]');
   checkbox.addEventListener("change", () => {
     if (checkbox.checked) {
-      todoItem.remove()
+      todoItem.remove();
     }
-  })
+  });
 
-  return todoItem
+  return todoItem;
 }

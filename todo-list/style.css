@@ -6,35 +6,32 @@ body {
 }
 
 h1 {
-  font-weight: 200;
   font-size: 8rem;
   text-align: center;
+  font-weight: 200;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
+.wrapper {
+  max-width: 40rem;
   margin: 0 auto;
-  align-items: center;
-}
-
-.container > div {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
 }
 
 #todo {
-  font-size: 3rem;
+  width: 100%;
   border-bottom: 2px solid gray;
+  font-size: 3rem;
 }
 
 #todo:focus {
   background-color: lavender;
 }
 
+.todo-list {
+  margin-top: 1rem;
+}
+
 button {
-  margin-top: 0.5rem;
+  margin-top: .5rem;
   border: none;
   background-color: #fff;
   font-family: inherit;
@@ -43,8 +40,8 @@ button {
 }
 
 button:hover {
-  cursor: pointer;
   font-weight: bold;
+  cursor: pointer;
 }
 
 button:focus {
@@ -56,8 +53,8 @@ button:active {
 }
 
 input {
-  padding: 0.3rem;
   border: none;
+  padding: .3rem;
   font-family: inherit;
   font-size: inherit;
 }
@@ -71,12 +68,8 @@ input:focus {
   outline: none;
 }
 
-.todo-item {
-  width: 35rem;
-}
-
 .todo-item > input[type="text"] {
-  width: 90%;
+  width: 93%;
 }
 
 .todo-item > input:focus {
