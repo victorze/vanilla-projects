@@ -5,7 +5,7 @@ const phrase = phrases[Math.floor(Math.random() * phrases.length)];
 
 phraseContainer.innerHTML = phrase.text
                               .split("")
-                              .map(char => `<span>${char}</span>`)
+                              .map(char => char == " " ? `<span class="space">␣</span><wbr>` : `<span>${char}</span>`)
                               .join("");
 by.innerText = phrase.by;
 
@@ -28,7 +28,7 @@ function handlerKeyDown(e) {
     return;
   }
 
-  if (e.key == chars[index].innerText || (e.key == "Enter" && chars[index].innerText == " ")) {
+  if (e.key == chars[index].innerText || (e.key == " " && chars[index].innerText == "␣")) {
     if (firstKeyPress) {
       start = Date.now();
       firstKeyPress = false;

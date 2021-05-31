@@ -33,8 +33,12 @@ h2 {
   border-bottom: 2px solid #66FCF1;
 }
 
+.space {
+  color: #646668;
+}
+
 .error {
-  color: salmon;
+  color: #CE1D29;
 }
 
 .by {
