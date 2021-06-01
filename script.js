@@ -4,6 +4,7 @@ const listProjects = [
   "todo-list",
   "cookie-clicker",
   "timer",
+  "point-of-sale",
   "bin-2-dec",
   "list-randomizer",
   "case-converter",
