@@ -1,5 +1,6 @@
 const listProjects = [
   "typing",
+  "plan-contable",
   "nueba-ortografia",
   "todo-list",
   "cookie-clicker",

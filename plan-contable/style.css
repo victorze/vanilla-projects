@@ -1,0 +1,167 @@
+* {
+  box-sizing: content-box
+}
+
+body {
+  margin: 0;
+  color: rgba(9, 13, 42, 0.9);
+  font-family: 'Nunito', sans-serif;
+  background-color: #202124;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: 3rem;
+}
+
+/* Estado de situación financiera */
+
+.financial-situation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.financial-situation > div {
+  width: 20rem;
+}
+
+.assets {
+  line-height: 15rem;
+  background-color: #FFC501;
+  transition: .3s ease;
+}
+
+.wrapper-liabilities-equity {
+  display: flex;
+  flex-direction: column;
+}
+
+.liabilities,
+.equity {
+  height: 50%;
+  line-height: 7.5rem;
+  transition: .3s ease;
+}
+
+.liabilities {
+  background-color: #C3213F;
+}
+
+.equity {
+  background-color: #00BE9C;
+}
+
+.assets:hover,
+.liabilities:hover,
+.equity:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+/* Estado de resultados */
+
+.results {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  width: 20rem;
+  text-align: center;
+}
+
+.revenues,
+.expenses {
+  height: 7.5rem;
+  line-height: 7.5rem;
+  transition: .3s ease;
+}
+
+.revenues {
+  background-color: #019AAC;
+}
+
+.expenses {
+  background-color: #FF4B3A;
+}
+
+.revenues:hover,
+.expenses:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+/* Modal */
+
+.modal {
+  /* display: none; */
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  padding-top: 1.5rem;
+  background-color: red;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.modal-content {
+  position: relative;
+  margin: 0 auto;
+  width: 70%;
+  padding: 2rem;
+  background-color: #202124;
+  color: white;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  float: right;
+  color: #AAAAAA;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Elements */
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: .5rem;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+.elements {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.element {
+  width: 20rem;
+}
+
+.element-title {
+  text-align: center;
+}
