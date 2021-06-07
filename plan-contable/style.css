@@ -3,102 +3,84 @@
 }
 
 body {
-  margin: 0;
-  color: rgba(9, 13, 42, 0.9);
   font-family: 'Nunito', sans-serif;
-  background-color: #202124;
+  background-color: #202124
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
-  font-size: 3rem;
+h1 {
+  margin: 3rem 0;
+  color: #f2f2f2;
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-/* Estado de situación financiera */
-
-.financial-situation {
+.catalogue {
   display: flex;
-  flex-wrap: wrap;
+  gap: .2rem;
   justify-content: center;
-  margin-top: 2rem;
+  margin: 0 auto;
+  max-width: 50rem;
   text-align: center;
 }
 
-.financial-situation > div {
-  width: 20rem;
-}
-
-.assets {
-  line-height: 15rem;
-  background-color: #FFC501;
-  transition: .3s ease;
-}
-
-.wrapper-liabilities-equity {
+.element {
   display: flex;
   flex-direction: column;
+  gap: .2rem;
 }
 
-.liabilities,
-.equity {
-  height: 50%;
-  line-height: 7.5rem;
+.element-1 .account {
+  background-color: #77DD88;
+}
+
+.element-2 .account {
+  background-color: #77CCFF;
+}
+
+.element-3 .account {
+  background-color: #CCCC00;
+}
+
+.element-4 .account {
+  background-color: #FF999A;
+}
+
+.element-5 .account {
+  background-color: #22EECC;
+}
+
+.element-6 .account {
+  background-color: #00CC00;
+}
+
+.element-7 .account {
+  background-color: #6495ED;
+}
+
+.element-8 .account {
+  background-color: #99DDCC;
+}
+
+.account {
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 0 5px 5px rgb(0 0 0 / 25%) inset;
   transition: .3s ease;
 }
 
-.liabilities {
-  background-color: #C3213F;
-}
-
-.equity {
-  background-color: #00BE9C;
-}
-
-.assets:hover,
-.liabilities:hover,
-.equity:hover {
+.account:hover {
   cursor: pointer;
-  transform: scale(1.02);
+  transform: scale(1.5);
 }
 
-/* Estado de resultados */
-
-.results {
-  display: flex;
-  flex-direction: column;
-  margin-top: 2rem;
-  width: 20rem;
-  text-align: center;
-}
-
-.revenues,
-.expenses {
-  height: 7.5rem;
-  line-height: 7.5rem;
-  transition: .3s ease;
-}
-
-.revenues {
-  background-color: #019AAC;
-}
-
-.expenses {
-  background-color: #FF4B3A;
-}
-
-.revenues:hover,
-.expenses:hover {
-  cursor: pointer;
-  transform: scale(1.02);
-}
 
 /* Modal */
 
 .modal {
-  /* display: none; */
+  display: none;
   position: fixed;
   left: 0;
   top: 0;
@@ -108,22 +90,23 @@ main {
   padding-top: 1.5rem;
   background-color: red;
   overflow: auto;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .modal-content {
   position: relative;
   margin: 0 auto;
   width: 70%;
-  padding: 2rem;
-  background-color: #202124;
-  color: white;
+  max-width: 45rem;
+  padding: 2rem 4rem 4rem;
+  background-color: #f2f2f2;
+  color: #202124;
 }
 
 .close {
   position: absolute;
-  top: 0;
-  right: 1rem;
+  top: .5rem;
+  right: 1.5rem;
   float: right;
   color: #AAAAAA;
   font-size: 2.5rem;
@@ -132,36 +115,36 @@ main {
 
 .close:hover,
 .close:focus {
-  color: white;
+  color: #202124;
   text-decoration: none;
   cursor: pointer;
 }
 
-/* Elements */
 
-ul {
-  list-style: none;
-  padding: 0;
+/* Account detail */
+
+.account-detail {
+  font-size: 1.2rem;
 }
 
-li {
-  padding: .5rem;
-}
-
-li:hover {
-  cursor: pointer;
-}
-
-.elements {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.element {
-  width: 20rem;
-}
-
-.element-title {
+h2 {
   text-align: center;
+}
+
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+h3 {
+  margin: 1.5rem 0 .75rem;
+}
+
+h4 {
+  margin: 1rem 0 .5rem;
+}
+
+p {
+  margin: .75rem 0;
 }
