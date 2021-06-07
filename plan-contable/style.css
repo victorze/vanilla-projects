@@ -30,6 +30,20 @@ h1 {
   gap: .2rem;
 }
 
+.account {
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 0 5px 5px rgb(0 0 0 / 25%) inset;
+  transition: .3s ease;
+}
+
+.account:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+}
+
 .element-1 .account {
   background-color: #77DD88;
 }
@@ -60,20 +74,6 @@ h1 {
 
 .element-8 .account {
   background-color: #99DDCC;
-}
-
-.account {
-  padding: 1rem;
-  border-radius: 4px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  box-shadow: 0 0 5px 5px rgb(0 0 0 / 25%) inset;
-  transition: .3s ease;
-}
-
-.account:hover {
-  cursor: pointer;
-  transform: scale(1.5);
 }
 
 
@@ -147,4 +147,23 @@ h4 {
 
 p {
   margin: .75rem 0;
+}
+
+@media (max-width: 600px) {
+  .modal-content {
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  .account {
+    padding: .75rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 0 5px 5px rgb(0 0 0 / 25%) inset;
+    transition: .3s ease;
+  }
+
+  .account-detail {
+    font-size: 1.1rem;
+  }
 }
