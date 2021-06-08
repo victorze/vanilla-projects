@@ -59,22 +59,22 @@ function buildAccountHtml(account) {
   const comments = account.comments.map(paragraph => `<p>${paragraph}</p>`).join("");
 
   return `
-    <section>
+    <div>
       <h2>${account.code} ${account.name}</h2>
       <p>${account.description}</p>
-    </section>
+    </div>
 
-    <section>
+    <div>
       <h3>NOMENCLATURA Y DESCRIPCIÓN DE LAS SUBCUENTAS</h3>
       <article>${subAccounts}</article>
-    </section>
+    </div>
 
-    <section>
+    <div>
       <h3>RECONOCIMIENTO Y MEDICIÓN</h3>
       <article>${recognitionAndMeasurement}</article>
-    </section>
+    </div>
 
-    <section>
+    <div>
       <h3>DINÁMICA CONTABLE</h3>
 
       <article>
@@ -86,10 +86,10 @@ function buildAccountHtml(account) {
         <h4>Es acreditada por:</h4>
         <div>${accredited}</div>
       </article>
-    </section>
+    </div>
 
-    <section>
+    <div>
       <h3>COMENTARIOS</h3>
       <article>${comments}</article>
-    </section>`
+    </div>`
 }

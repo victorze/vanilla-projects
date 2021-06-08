@@ -88,19 +88,20 @@ h1 {
   width: 100%;
   height: 100%;
   padding-top: 1.5rem;
-  background-color: red;
   overflow: auto;
   background-color: rgba(255, 255, 255, 0.3);
 }
 
 .modal-content {
   position: relative;
-  margin: 0 auto;
+  margin: 0 auto 3rem;
   width: 70%;
   max-width: 45rem;
   padding: 2rem 4rem 4rem;
   background-color: #f2f2f2;
   color: #202124;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 5px rgb(0 0 0 / 25%) inset;
 }
 
 .close {
