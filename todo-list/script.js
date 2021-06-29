@@ -1,13 +1,6 @@
 const todo = document.querySelector("#todo");
 const todoList = document.querySelector(".todo-list");
 
-// show tasks
-for (let i = 0; i < localStorage.length; i++) {
-  const key = localStorage.key(i);
-  const value = localStorage.getItem(key);
-  todoList.appendChild(createItem({key, value}));
-}
-
 todo.addEventListener("keydown", e => {
   if (e.keyCode == 13) addTask();
 });
@@ -18,6 +11,22 @@ function addTask() {
   todoList.appendChild(createItem(task));
   localStorage.setItem(task.key, task.value);
   todo.value = "";
+}
+
+// show tasks
+getTasks().forEach((value, key) => todoList.appendChild(createItem({key, value})));
+
+function getTasks() {
+  const tasks = new Map();
+  let keys = Object.keys(localStorage);
+  keys = keys.map(k => +k);
+  keys.sort();
+
+  for (let key of keys) {
+    tasks.set(key, localStorage.getItem(key));
+  }
+
+  return tasks;
 }
 
 function createItem({key, value}) {
@@ -40,5 +49,3 @@ function createItem({key, value}) {
 
   return todoItem;
 }
-
-// TODO: ordenar las tareas
