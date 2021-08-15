@@ -25,7 +25,7 @@ header {
   margin-right: .3rem;
 }
 
-.search {
+.search-input {
   width: 20rem;
   height: 28px;
   border: 1px solid #232324;
@@ -36,9 +36,30 @@ header {
   font-family: inherit;
 }
 
-.search:focus {
+.search-input:focus {
   outline: none !important;
   border-color: #388BFD;
+}
+
+.search-button {
+  margin-left: .3rem;
+  width: 5rem;
+  height: 28px;
+  border: 1px solid #30363D;
+  border-radius: 5px;
+  background-color: #21262D;
+  color: #C9D1D9;
+  font-family: inherit;
+}
+
+.search-button:hover {
+  border-color: #8B949E;
+  background-color: #30363D;
+  cursor: pointer;
+}
+
+.search-button:active {
+  background-color: #21262D;
 }
 
 main {
@@ -56,8 +77,9 @@ main {
 }
 
 .avatar {
-  max-width: 100%;
+  max-width: 90%;
   border-radius: 50%;
+  margin: 0 auto;
 }
 
 .user-name {
@@ -100,14 +122,18 @@ main {
 .repositories {
   width: 80%;
   margin: 0 1rem;
-  border-top: .2px solid #232324;
 }
 
 .repo-info {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   border-bottom: .2px solid #232324;
   padding: 1.5rem;
+}
+
+.repo-info:first-child {
+  border-top: .2px solid #232324;
 }
 
 .repo-link {
@@ -126,7 +152,10 @@ main {
 
 .repo-description {
   margin-top: .5rem;
-  margin-bottom: 1rem;
+}
+
+.repo-language {
+  margin-top: 1rem;
 }
 
 /* Mobile Responsive */
@@ -135,7 +164,13 @@ main {
     flex-direction: column;
   }
 
+  .avatar {
+    width: 50%;
+    margin: 0 auto;
+  }
+
   .user-info {
+    width: 70%;
     margin: 0 auto 1rem;
   }
 
