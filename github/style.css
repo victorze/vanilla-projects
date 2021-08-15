@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #0D1117;
+  color: #8B949E;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+}
+
+header {
+  height: 62px;
+  background-color: #161B22;
+  text-align: center;
+  line-height: 62px;
+}
+
+.search {
+  width: 20rem;
+  height: 28px;
+  border: 1px solid #232324;
+  border-radius: 5px;
+  padding: 0 10px;
+  background-color: #0D1117;
+  color: #C9D1D9;
+}
+
+.search:focus {
+  outline: none !important;
+  border-color: #388BFD;
+}
+
+main {
+  display: flex;
+  margin: 2rem auto;
+  max-width: 80rem;
+}
+
+/* User info */
+.user-info {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  margin: 0 1rem;
+  line-height: 1.5;
+}
+
+.avatar {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.user-name {
+  color: #C9D1D9;
+  font-size: 2rem;
+}
+
+.user-nickname {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.followers,
+.following {
+  color: inherit;
+  text-decoration: none;
+}
+
+.followers:hover,
+.following:hover {
+  color: #58A6FF;
+}
+
+.number-followers,
+.number-following {
+  color: #C9D1D9;
+}
+
+/* Repositories */
+.repositories {
+  width: 80%;
+  margin: 0 1rem;
+  border-top: .2px solid #232324;
+}
+
+.repo-info {
+  display: flex;
+  flex-direction: column;
+  border-bottom: .2px solid #232324;
+  padding: 1.5rem;
+}
+
+.repo-link {
+  display: inline-block;
+  color: #58A6FF;
+  text-decoration: none;
+}
+
+.repo-link:hover {
+  text-decoration: underline;
+}
+
+.repo-name {
+  font-size: 1.25rem;
+}
+
+.repo-description {
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+}
+
