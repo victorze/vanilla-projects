@@ -19,6 +19,12 @@ header {
   line-height: 62px;
 }
 
+.logo-github {
+  position: relative;
+  top: .25rem;
+  margin-right: .3rem;
+}
+
 .search {
   width: 20rem;
   height: 28px;
@@ -27,6 +33,7 @@ header {
   padding: 0 10px;
   background-color: #0D1117;
   color: #C9D1D9;
+  font-family: inherit;
 }
 
 .search:focus {
@@ -46,7 +53,6 @@ main {
   flex-direction: column;
   width: 25%;
   margin: 0 1rem;
-  line-height: 1.5;
 }
 
 .avatar {
@@ -60,8 +66,18 @@ main {
 }
 
 .user-nickname {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 300;
+}
+
+.bio {
+  margin-top: 1rem;
+  color: #C9D1D9;
+  font-size: 1rem;
+}
+
+.wrapper-follow {
+  margin: 1rem 0 .3rem;
 }
 
 .followers,
@@ -113,3 +129,17 @@ main {
   margin-bottom: 1rem;
 }
 
+/* Mobile Responsive */
+@media (max-width: 48rem) {
+  main {
+    flex-direction: column;
+  }
+
+  .user-info {
+    margin: 0 auto 1rem;
+  }
+
+  .repositories {
+    margin: 0 auto;
+  }
+}
