@@ -14,7 +14,7 @@ searchButton.addEventListener("click", async () => {
     return;
   }
 
-  if (userInfo.message.indexOf("API rate limit exceeded") >= 0) {
+  if (userInfo.message && userInfo.message.includes("API rate limit exceeded")) {
     alert(userInfo.message);
     return;
   }
