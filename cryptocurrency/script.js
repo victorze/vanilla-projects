@@ -47,11 +47,11 @@ function renderTable(coins) {
   `).join("");
 }
 
-function amountFormat(amount, decimal = 0) {
+function amountFormat(amount, fractionDigits = 0) {
   const option = {
     style: "currency",
     currency: "USD",
-    minimumFractionDigits: decimal,
+    minimumFractionDigits: fractionDigits,
     currencyDisplay: "symbol",
   };
 
@@ -68,7 +68,6 @@ function percentageFormat(number) {
 }
 
 async function getData() {
-  const endPoint = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&order=market_cap_desc&per_page=100&page=1";
-  const response = await fetch(endPoint);
+  const response = await fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&order=market_cap_desc&per_page=100&page=1");
   return response.json();
 }
