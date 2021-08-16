@@ -10,11 +10,10 @@ window.addEventListener("load", async () => {
 
 let timeout;
 searchInput.addEventListener("input", () => {
-  const search = searchInput.value;
   const filteredData = coins.filter(
     coin =>
-      coin.name.toLowerCase().includes(search.toLowerCase()) |
-      coin.symbol.toLowerCase().includes(search.toLowerCase())
+      coin.name.toLowerCase().includes(searchInput.value.toLowerCase()) |
+      coin.symbol.toLowerCase().includes(searchInput.value.toLowerCase())
   );
 
   clearTimeout(timeout);
