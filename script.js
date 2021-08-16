@@ -1,4 +1,6 @@
 const listProjects = [
+  "cryptocurrency",
+  "github",
   "typing",
   "plan-contable",
   "todo-list",
