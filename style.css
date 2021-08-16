@@ -35,6 +35,10 @@ h1 {
   border-radius: 5px;
 }
 
+.project p::first-letter {
+  text-transform: uppercase;
+}
+
 img {
   width: 25rem;
   border-radius: 5px;

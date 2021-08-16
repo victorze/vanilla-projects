@@ -1,4 +1,4 @@
-const listProjects = [
+const projects = [
   "cryptocurrency",
   "github",
   "typing",
@@ -12,8 +12,8 @@ const listProjects = [
   "case-converter",
 ];
 
-const projects = document.querySelector(".projects");
-projects.innerHTML = listProjects
+const projectsNode = document.querySelector(".projects");
+projectsNode.innerHTML = projects
                         .map(project => template(project))
                         .join("");
 
@@ -21,12 +21,7 @@ function template(project) {
   return `
     <a class="project" href="${project}" target="_blank">
       <img src="images/${project}.png" alt="">
-      <p>${format(project)}</p>
+      <p>${project}</p>
     </a>
   `;
-}
-
-function format(project) {
-  const name = project.split("-").join(" ");
-  return name[0].toUpperCase() + name.slice("1");
 }
