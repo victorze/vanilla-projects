@@ -17,6 +17,8 @@ h1 {
   text-align: center;
   font-size: 2rem;
   margin: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .search-input {
