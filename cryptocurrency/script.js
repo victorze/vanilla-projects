@@ -30,7 +30,9 @@ function renderTable(coins) {
           alt="${coin.name}"
           class="coin-image"
         >
-        <a href="https://www.coingecko.com/en/coins/${coin.id}" class="coin-name" target="_blank">${coin.name}</a>
+        <a href="https://www.coingecko.com/en/coins/${coin.id}" class="coin-name" target="_blank">
+          ${coin.name}
+        </a>
         <span class="symbol">${coin.symbol}</span>
       </td>
       <td class="price">${amountFormat(coin.current_price, 2)}</td>
@@ -59,7 +61,7 @@ function amountFormat(amount, fractionDigits = 0) {
 
 function percentageFormat(number) {
   const option = {
-    style: 'percent',
+    style: "percent",
     minimumFractionDigits: 1,
   };
 
