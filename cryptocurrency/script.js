@@ -40,7 +40,7 @@ function renderTable(coins) {
         ${amountFormat(coin.price_change_24h, 2)}
       </td>
       <td class="price-change-percentage ${coin.price_change_24h >= 0 ? "positive-percentage" : "negative-percentage"}">
-        ${percentageFormat(coin.price_change_percentage_24h)}
+        ${percentageFormat(coin.price_change_percentage_24h / 100)}
       </td>
       <td class="volume">${amountFormat(coin.total_volume)}</td>
       <td class="market-cap">${amountFormat(coin.market_cap)}</td>
