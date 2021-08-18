@@ -1,5 +1,6 @@
 const cardsNode = document.querySelector(".cards");
 const loaderNode = document.querySelector(".loader");
+const searchInput = document.querySelector(".search-input");
 
 let currentPage = 1;
 const limit = 20;
@@ -13,21 +14,34 @@ window.addEventListener("scroll", () => {
   if (scrollTop + clientHeight >= scrollHeight - 5 &&
     hasMoreCharacters(currentPage, limit, total)) {
     currentPage++;
-    loadCharacters(currentPage, limit);
+    loadCharacters(currentPage, limit, searchInput.value);
   }
 }, {
   passive: true
 });
 
-async function loadCharacters(page, limit) {
+let timeout;
+searchInput.addEventListener("input", () => {
+  let currentPage = 1;
+  let total = 0;
+  cardsNode.innerHTML = "";
+
+  clearTimeout(timeout);
+  timeout = setTimeout(() => {
+    loadCharacters(currentPage, limit, searchInput.value);
+  }, 250);
+});
+
+async function loadCharacters(page, limit, name = "") {
   showLoader();
 
   setTimeout(async () => {
     try {
       if (hasMoreCharacters(page, limit, total)) {
-        const response = await getCharacters(page);
+        const response = await getCharacters(page, name);
         showCharacters(response.results);
         total = response.info.count;
+        console.log({total});
       }
     } catch (error) {
       console.log(error.message);
@@ -81,11 +95,12 @@ function showCharacters(characters) {
   cardsNode.appendChild(fragment);
 }
 
-async function getCharacters(page) {
-  const API_URL = `https://rickandmortyapi.com/api/character?page=${page}`;
+async function getCharacters(page, name = "") {
+  const API_URL = `https://rickandmortyapi.com/api/character?page=${page}${name ? `&name=${name}` : ""}`;
   const response = await fetch(API_URL);
 
   if(!response.ok) {
+    console.log("error")
     throw new Error(`An error occurred: ${response.status}`);
   }
 
@@ -102,5 +117,6 @@ function showLoader() {
 
 function hasMoreCharacters(page, limit, total) {
   const startIndex = (page - 1) * limit + 1;
+  console.log({startIndex, total});
   return total === 0 || startIndex < total;
 }
