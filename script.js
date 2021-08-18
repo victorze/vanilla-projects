@@ -21,7 +21,7 @@ function template(project) {
   return `
     <a class="project" href="${project}" target="_blank">
       <img src="images/${project}.png" alt="">
-      <p>${project}</p>
+      <p>${project.split("-").join(" ")}</p>
     </a>
   `;
 }

@@ -10,7 +10,7 @@ searchButton.addEventListener("click", async () => {
   ]);
 
   if (userInfo.message === "Not Found") {
-    alert("El usuario no existe.");
+    alert(`User ${searchInput.value} does not exist.`);
     return;
   }
 

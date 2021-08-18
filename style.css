@@ -35,7 +35,7 @@ h1 {
   border-radius: 5px;
 }
 
-.project p::first-letter {
+.project p {
   text-transform: uppercase;
 }
 
