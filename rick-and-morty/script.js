@@ -22,8 +22,8 @@ window.addEventListener("scroll", () => {
 
 let timeout;
 searchInput.addEventListener("input", () => {
-  let currentPage = 1;
-  let total = 0;
+  currentPage = 1;
+  total = 0;
   cardsNode.innerHTML = "";
 
   clearTimeout(timeout);
@@ -35,25 +35,30 @@ searchInput.addEventListener("input", () => {
 async function loadCharacters(page, limit, name = "") {
   showLoader();
 
-  setTimeout(async () => {
-    try {
-      if (hasMoreCharacters(page, limit, total)) {
-        const response = await getCharacters(page, name);
-        showCharacters(response.results);
-        total = response.info.count;
-        console.log({total});
-      }
-    } catch (error) {
-      console.log(error.message);
-    } finally {
-      hideLoader();
+  try {
+    if (hasMoreCharacters(page, limit, total)) {
+      const response = await getCharacters(page, name);
+      showCharacters(response.results);
+      total = response.info.count;
     }
-  }, 500);
+  } catch (error) {
+    const message = error.status === 404 ?
+      "That character is not in this universe." :
+      error.message
+
+    cardsNode.innerHTML = `
+      <div class="error-message">
+        ${message}
+      </div>`
+  } finally {
+    hideLoader();
+  }
 }
 
 function showCharacters(characters) {
   let fragment = document.createDocumentFragment();
 
+  console.log({characters})
   characters.forEach((character) =>  {
     const cardNode = document.createElement("article");
     cardNode.classList.add("card");
@@ -99,9 +104,11 @@ async function getCharacters(page, name = "") {
   const API_URL = `https://rickandmortyapi.com/api/character?page=${page}${name ? `&name=${name}` : ""}`;
   const response = await fetch(API_URL);
 
+  console.log({results: response.results, response});
   if(!response.ok) {
-    console.log("error")
-    throw new Error(`An error occurred: ${response.status}`);
+    const error = new Error(`An error occurred: ${response.status}`);
+    error.status = response.status;
+    throw error;
   }
 
   return await response.json();

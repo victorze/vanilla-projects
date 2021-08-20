@@ -15,8 +15,7 @@ h2 {
 
 .title {
   text-align: center;
-  /* text-transform: uppercase; */
-  font-size: 3.5rem;
+  font-size: 4rem;
   letter-spacing: 3px;
 }
 
@@ -103,6 +102,12 @@ h2 {
 .location,
 .origin {
   font-size: 18px;
+}
+
+.error-message {
+  margin: 3rem;
+  color: #9e9e9e;
+  font-size: 1.5rem;
 }
 
 /* loader */

@@ -1,6 +1,7 @@
 const projects = [
   "cryptocurrency",
   "github",
+  "rick-and-morty",
   "typing",
   "plan-contable",
   "todo-list",
