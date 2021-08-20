@@ -58,7 +58,6 @@ async function loadCharacters(page, limit, name = "") {
 function showCharacters(characters) {
   let fragment = document.createDocumentFragment();
 
-  console.log({characters})
   characters.forEach((character) =>  {
     const cardNode = document.createElement("article");
     cardNode.classList.add("card");
@@ -104,7 +103,6 @@ async function getCharacters(page, name = "") {
   const API_URL = `https://rickandmortyapi.com/api/character?page=${page}${name ? `&name=${name}` : ""}`;
   const response = await fetch(API_URL);
 
-  console.log({results: response.results, response});
   if(!response.ok) {
     const error = new Error(`An error occurred: ${response.status}`);
     error.status = response.status;
@@ -124,6 +122,5 @@ function showLoader() {
 
 function hasMoreCharacters(page, limit, total) {
   const startIndex = (page - 1) * limit + 1;
-  console.log({startIndex, total});
   return total === 0 || startIndex < total;
 }
